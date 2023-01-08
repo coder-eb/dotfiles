@@ -13,12 +13,12 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$cmd_duration\
 $conda\
 $nodejs\
 $python\
+$cmd_duration\
 $jobs $time\
-$line_break\
+$line_break\ 
 $character"""
 
 
@@ -32,7 +32,8 @@ symbol = " "
 format = '[$symbol$version](bold yellow) '
 
 [python]
-symbol = " "
+symbol=' '
+python_binary = ['./venv/bin/python', 'python', 'python3']
 format = '[$symbol$version](bold yellow) '
 
 # User Modules 
@@ -64,8 +65,10 @@ format = "at [$path]($style)[$read_only]($read_only_style) "
 symbol = ' '
 
 [time]
+use_12hr=true
 disabled = false
 style = "bold white"
+#style="#8E9DCC"
 format = "[$time]($style)"
 
 [cmd_duration]
@@ -114,7 +117,8 @@ disabled = false
 
 ## Error display
 [character]
-#success_symbol = "[](bold black)"
-#error_symbol = "[](red)"
+success_symbol = "[](bold black)"
+#success_symbol = "[](#F9F9ED)"
+error_symbol = "[](bold black)"
 ##success_symbol = '[➜](bold green) '
 ##error_symbol = '[✗](bold red) '

@@ -136,4 +136,7 @@ function set_win_title(){
 }
 precmd_functions+=(set_win_title)
 
+bindkey '	' autosuggest-accept
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 eval "$(starship init zsh)"

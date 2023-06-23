@@ -5,6 +5,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Ebran Settings
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+export ANDROID_HOME=$HOME/android
+export ANDROID_SDK_ROOT=${ANDROID_HOME}
+export PATH=${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${PATH}
+
+export WSL_HOST_IP="$(tail -1 /etc/resolv.conf | cut -d' ' -f2)"
+export ADB_SERVER_SOCKET=tcp:$WSL_HOST_IP:5037
+export REACT_NATIVE_CLI_AUTOSTART_ADB=false
+
+alias algo="~/coding/ds/AlgoCasts"
+alias money="~/coding/rn/money-manager"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -17,6 +30,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,7 +92,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,13 +144,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-#Put this on the bottom of file
-function set_win_title(){
-	echo -ne "\033]0; $(basename "$PWD") \007"
-}
-precmd_functions+=(set_win_title)
-
-bindkey '	' autosuggest-accept
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-eval "$(starship init zsh)"
+# For starship 
+# function set_win_title(){
+# 	echo -ne "\033]0; $(basename "$PWD") \007"
+# }
+# precmd_functions+=(set_win_title)
+# eval "$(starship init zsh)"

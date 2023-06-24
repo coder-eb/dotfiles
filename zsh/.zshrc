@@ -15,9 +15,6 @@ export WSL_HOST_IP="$(tail -1 /etc/resolv.conf | cut -d' ' -f2)"
 export ADB_SERVER_SOCKET=tcp:$WSL_HOST_IP:5037
 export REACT_NATIVE_CLI_AUTOSTART_ADB=false
 
-alias algo="~/coding/ds/AlgoCasts"
-alias money="~/coding/rn/money-manager"
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -143,10 +140,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# For starship 
-# function set_win_title(){
-# 	echo -ne "\033]0; $(basename "$PWD") \007"
-# }
-# precmd_functions+=(set_win_title)
-# eval "$(starship init zsh)"

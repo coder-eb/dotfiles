@@ -9,12 +9,13 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
 
-export ANDROID_HOME=~/Android
+export ANDROID_HOME=$HOME/Android
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export NVIM_HOME=$HOME/.local/share/bob/nvim-bin
+export NEOVIM_HOME=$HOME/.local/share/bob/nvim-bin
 
-export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:~/.local/bin:$NVIM_HOME
+export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:~/.local/bin:$NEOVIM_HOME
 
+# X-X-X-------------------- START: ZSH - User configuration --------------------X-X-X
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -26,6 +27,10 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
+# Would you like to use another custom folder than $ZSH/custom?
+DOTFILES=$HOME/dotfiles
+ZSH_CUSTOM=$DOTFILES/zsh/custom
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -33,10 +38,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# X-X-X-------------------- END: ZSH - User configuration --------------------X-X-X
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -1,3 +1,4 @@
+alias vim="nvim"
 # Fast-travel aliases
 alias gotod="$HOME/downloads"
 alias gotodot="$HOME/dotfiles"

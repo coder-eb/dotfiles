@@ -2,6 +2,7 @@
 alias gotod="$HOME/downloads"
 alias gotodot="$HOME/dotfiles"
 alias gocode="$HOME/coding"
+alias gotonvim="$HOME/.config/nvim"
 
 alias gotoapi="$HOME/Matoke/flow-api"
 alias gotoui="$HOME/Matoke/flow_admin_ui"

@@ -5,15 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-#
-
 export ANDROID_HOME=$HOME/Android
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export NEOVIM_HOME=$HOME/.local/share/bob/nvim-bin
+export NEOVIM_BIN=$HOME/.local/share/bob/nvim-bin
 
-export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:~/.local/bin:$NEOVIM_HOME
+# Where to search for executables?
+JAVA_BINARIES=$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+LOCAL_BINARIES=/usr/local/bin:$HOME/.local/bin:$NEOVIM_BIN
+export PATH=$PATH:$LOCAL_BINARIES:$JAVA_BINARIES
 
 # X-X-X-------------------- START: ZSH - User configuration --------------------X-X-X
 

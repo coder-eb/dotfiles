@@ -7,9 +7,9 @@ fi
 
 export ANDROID_HOME=$HOME/Android
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export NEOVIM_BIN=$HOME/.local/share/bob/nvim-bin
 
 # Where to search for executables?
+NEOVIM_BIN=$HOME/.local/share/bob/nvim-bin
 JAVA_BINARIES=$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 LOCAL_BINARIES=/usr/local/bin:$HOME/.local/bin:$NEOVIM_BIN
 export PATH=$PATH:$LOCAL_BINARIES:$JAVA_BINARIES

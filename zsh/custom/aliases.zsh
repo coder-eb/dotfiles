@@ -1,9 +1,10 @@
 # Random stuff
 alias vim="nvim"
+export DOTFILES_PATH="$HOME/dotfiles"
 
 # Fast-travel aliases
 alias gotod="$HOME/downloads"
-alias gotodot="$HOME/dotfiles"
+alias gotodot=$DOTFILES_PATH
 alias gocode="$HOME/coding"
 alias gotonvim="$HOME/.config/nvim"
 

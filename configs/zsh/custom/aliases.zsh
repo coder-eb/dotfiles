@@ -2,7 +2,7 @@
 alias vim="nvim"
 
 # Fast-travel aliases
-alias gotod="$HOME/downloads"
+alias gotod="$HOME/Downloads"
 alias gotodot=$DOTFILES
 alias gocode="$HOME/coding"
 alias gotonvim="$HOME/.config/nvim"

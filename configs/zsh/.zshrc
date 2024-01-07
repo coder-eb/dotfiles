@@ -7,6 +7,7 @@ fi
 
 export ANDROID_HOME=$HOME/Android
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Where to search for executables?
 NEOVIM_BIN=$HOME/.local/share/bob/nvim-bin

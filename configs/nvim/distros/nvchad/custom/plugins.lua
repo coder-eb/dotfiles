@@ -47,6 +47,17 @@ local plugins = {
     end,
   },
 
+  {
+    "sindrets/diffview.nvim",
+    branch="main",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" }
+  },
+
+  {
+    "lambdalisue/suda.vim",
+    cmd = {"SudaRead", "SudaWrite"},
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

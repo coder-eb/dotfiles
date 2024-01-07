@@ -13,6 +13,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
 
+    -- custom
     "php",
     "python",
   },
@@ -36,12 +37,14 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
-    "intelephense",
-    "pyright",
 
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- custom
+    "intelephense", -- php
+    "pyright", -- python
   },
 }
 

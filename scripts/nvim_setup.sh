@@ -41,9 +41,13 @@ install_nvchad() {
     echo "installing latest version of NvChad..."
     git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
     
+    HOME_NVCHAD_CUSTOM=$HOME/.config/nvim/lua/custom
+    DOTFILES_NVCHAD_CUSTOM=$DOTFILES/configs/nvim/distros/nvchad/custom
+
     echo "copying custom configs for NvChad.."
-    NVCHAD_CUSTOM_CONFIGS=$DOTFILES_PATH/configs/nvim/distros/nvchad/custom
-    ln -s $NVCHAD_CUSTOM_CONFIGS $HOME/.config/nvim/lua/custom
+    ln -s $DOTFILES_NVCHAD_CUSTOM $HOME_NVCHAD_CUSTOM
+
+    echo "Symbolic link created successfully: $HOME_NVCHAD_CUSTOM -> $DOTFILES_NVCHAD_CUSTOM"
 }
 
 

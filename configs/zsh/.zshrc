@@ -28,7 +28,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 # Would you like to use another custom folder than $ZSH/custom?
-DOTFILES=$HOME/dotfiles
+export DOTFILES=$HOME/dotfiles
 ZSH_CUSTOM=$DOTFILES/configs/zsh/custom
 
 # Which plugins would you like to load?

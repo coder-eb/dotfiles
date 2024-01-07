@@ -40,12 +40,14 @@ install_nvchad() {
 
     echo "installing latest version of NvChad..."
     git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+    
     echo "copying custom configs for NvChad.."
-    ln -s $DOTFILES_PATH/nvim/distros/nvchad/custom $HOME/.config/nvim/lua/custom
+    NVCHAD_CUSTOM_CONFIGS=$DOTFILES_PATH/configs/nvim/distros/nvchad/custom
+    ln -s $NVCHAD_CUSTOM_CONFIGS $HOME/.config/nvim/lua/custom
 }
 
 
-# rm_existing_binary nvim
-# rm_existing_binary bob
-# install_bob_and_nvim
+rm_existing_binary nvim
+rm_existing_binary bob
+install_bob_and_nvim
 install_nvchad

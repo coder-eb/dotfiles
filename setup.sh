@@ -18,7 +18,7 @@ if [ -e "$zshrc_path" ]; then
 fi
 
 target_link=$zshrc_path
-source_file="$HOME/dotfiles/zsh/.zshrc"
+source_file="$HOME/dotfiles/configs/zsh/.zshrc"
 
 # Check if the source file exists
 if [ -e "$source_file" ]; then

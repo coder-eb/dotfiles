@@ -61,6 +61,18 @@ M.nvimtree = {
       show = {
         git = true,
       },
+      git_placement = "after",
+      glyphs = {
+        git = {
+            unstaged = "M",
+            staged = "S",
+            unmerged = "!",
+            untracked = "U",
+            renamed = "R",
+            deleted = "D",
+            ignored = "",
+          },
+      }
     },
   },
 }

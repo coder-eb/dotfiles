@@ -13,7 +13,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 NEOVIM_BIN=$HOME/.local/share/bob/nvim-bin
 JAVA_BINARIES=$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 LOCAL_BINARIES=/usr/local/bin:$HOME/.local/bin:$NEOVIM_BIN
-export PATH=$PATH:$LOCAL_BINARIES:$JAVA_BINARIES
+GO_BINARY=/usr/local/go/bin
+export PATH=$PATH:$LOCAL_BINARIES:$JAVA_BINARIES:$GO_BINARY
 
 # X-X-X-------------------- START: ZSH - User configuration --------------------X-X-X
 
